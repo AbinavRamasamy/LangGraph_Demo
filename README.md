@@ -1,4 +1,4 @@
-# LangGraph\_Demo
+# LangGraph Demo
 
 LangGraph calculator example: a router node conditionally branches to an operation node (add, subtract, multiply, divide, modulo, exponent), converges to a message node, and falls back to `END` on an unknown operator. The graph is visualized with `IPython.display`.
 
