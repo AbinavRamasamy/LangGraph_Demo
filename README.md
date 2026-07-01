@@ -10,7 +10,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Copy `.env.example` to `.env` and set `OPENROUTER_API_KEY` if you plan to wire an LLM into any of the nodes.
+Copy `.env.example` to `.env` and set `OPENROUTER_API_KEY` if you plan to use an LLM into any of the nodes.
 
 ## Run
 
@@ -32,6 +32,6 @@ jupyter nbconvert --to notebook --execute --inplace langgraph.ipynb
 ## Project structure
 
 ```
-langgraph.ipynb   # notebook: graph definition, visualization, and a sample invoke
-requirements.txt        # dependencies
+langgraph.ipynb     # notebook: graph definition, visualization, and a sample invoke
+requirements.txt    # dependencies
 ```
