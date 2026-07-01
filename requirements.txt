@@ -1,3 +1,5 @@
 langgraph==1.2.7
 jupyter==1.1.1
 ipykernel==7.3.0
+langchain-openrouter==0.2.4
+python-dotenv==1.0.1

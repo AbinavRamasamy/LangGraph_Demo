@@ -1,6 +1,6 @@
-# LangGraph_Demo
+# LangGraph\_Demo
 
-LangGraph calculator example: a router node conditionally branches to an operation node (add, subtract, multiply, divide, modulo, exponent), converges to a message node, and falls back to `END` on an unknown operator. Graph visualized via `IPython.display`.
+LangGraph calculator example: a router node conditionally branches to an operation node (add, subtract, multiply, divide, modulo, exponent), converges to a message node, and falls back to `END` on an unknown operator. The graph is visualized with `IPython.display`.
 
 ## Setup
 
@@ -28,10 +28,12 @@ jupyter nbconvert --to notebook --execute --inplace langgraph.ipynb
 - `router` node fills in any missing state keys with defaults before routing.
 - `add_conditional_edges` sends state to the matching operation node based on `operator`; unrecognized operators route straight to `END`.
 - Each operation node computes `result`; all converge on a `create_message` node that formats the final string.
+- `create_message` tries to phrase the result via an LLM (OpenRouter); on any failure (rate limit, network) it falls back to a formatted string.
 
 ## Project structure
 
 ```
 langgraph.ipynb     # notebook: graph definition, visualization, and a sample invoke
-requirements.txt    # dependencies
+requirements.txt    # required dependencies
 ```
+
